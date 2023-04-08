@@ -49,6 +49,61 @@
       "id": 10,
       "title": "Cowboy Bebop",
       "image": "https://cdn.myanimelist.net/images/anime/4/19644.jpg"
+    },
+    {
+      "id": 11,
+      "title": "Made In Abyss",
+      "image": "https://cdn.myanimelist.net/images/anime/6/86733.jpg"
+    },
+    {
+      "id": 12,
+      "title": "Gintama",
+      "image": "https://cdn.myanimelist.net/images/anime/10/73274.jpg"
+    },
+    {
+      "id": 13,
+      "title": "One Punch Man",
+      "image": "https://cdn.myanimelist.net/images/anime/12/76049.jpg"
+    },
+    {
+      "id": 14,
+      "title": "Hello World",
+      "image": "https://cdn.myanimelist.net/images/anime/1395/102089.jpg"
+    },
+        {
+      "id": 15,
+      "title": "Initial D First Stage",
+      "image": "https://cdn.myanimelist.net/images/anime/13/6801.jpg"
+    },
+        {
+      "id": 16,
+      "title": "Dragon Ball",
+      "image": "https://cdn.myanimelist.net/images/anime/1887/92364.jpg"
+    },
+        {
+      "id": 16,
+      "title": "Detective Conan (TV)",
+      "image": "https://cdn.myanimelist.net/images/anime/7/75199.jpg"
+    },
+        {
+      "id": 17,
+      "title": "Pokemon",
+      "image": "https://cdn.myanimelist.net/images/anime/13/73834.jpg"
+    },
+        {
+      "id": 18,
+      "title": "JoJo no Kimyou na Bouken: Adventure",
+      "image": "https://cdn.myanimelist.net/images/anime/8/53147.jpg"
+    },
+        {
+      "id": 19,
+      "title": "Dragon Ball Z",
+      "image": "https://cdn.myanimelist.net/images/anime/6/20936.jpg"
+    },
+        {
+      "id": 20,
+      "title": "Crayon Shin-chan",
+      "image": "https://cdn.myanimelist.net/images/anime/10/59897.jpg"
     }
   ]
 }
