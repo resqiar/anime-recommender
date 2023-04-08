@@ -10,6 +10,22 @@ def indexPage():
 def loginPage():
     return render_template("login.html")
 
+@app.route('/rate/<int:id>')
+def rate(id):
+    # open JSON file
+    with open('data/anime.json', 'r') as file:
+        # read the file as content
+        content = json.load(file)
+
+        # check if logged user is available in the saved data
+        for anime in content["animes"]:
+            if anime["id"] == id:
+                # return their current data
+                return render_template("rate.html", anime=anime)
+
+    # otherwise return 404
+    return make_response(jsonify({'error': 'anime not found'}), 404)
+
 @app.route("/api/login", methods=['POST'])
 def login():
     body = request.get_json()
