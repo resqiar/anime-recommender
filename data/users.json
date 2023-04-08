@@ -1,12 +1,18 @@
 {
   "users": [
     {
+      "rated": {
+        "Fullmetal Alchemist: Brotherhood": 3.0,
+        "Naruto": 4.0
+      },
       "username": "resqiar"
     },
     {
+      "rated": {},
       "username": "hilmy"
     },
     {
+      "rated": {},
       "username": "nathan"
     }
   ]

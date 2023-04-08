@@ -1,4 +1,14 @@
-let rate = "0.0";
+let currentUser = null;
+
+function getCurrentUser() {
+  const user = localStorage.getItem("user");
+  if (!user) return window.location = "/login";
+  currentUser = JSON.parse(user);
+}
+
+getCurrentUser();
+
+let rate = currentUser.rated[anime.title] ?? "0.0";
 const rating = document.querySelector('.rating');
 let currentRatingElem = document.getElementById(rate);
 currentRatingElem.checked = true;
@@ -24,3 +34,32 @@ function showRatingInfo() {
 }
 
 showRatingInfo();
+
+const rateBtn = document.getElementById("rate-btn");
+rateBtn.addEventListener("click", submitRate);
+
+async function submitRate() {
+  try {
+    const req = await fetch("/api/rate", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        username: currentUser.username,
+        anime_name: anime.title,
+        anime_rating: rate
+      })
+    })
+
+    const result = await req.json();
+
+    if (!result.error) {
+      // save updated data back to local storage
+      localStorage.setItem("user", JSON.stringify(result));
+      window.location.href = "/";
+    }
+  } catch (error) {
+    console.log(error);
+  }
+}
