@@ -104,6 +104,21 @@
       "id": 20,
       "title": "Crayon Shin-chan",
       "image": "https://cdn.myanimelist.net/images/anime/10/59897.jpg"
+    },
+    {
+      "id": 21,
+      "title": "Dr.Stone",
+      "image": "https://cdn.myanimelist.net/images/anime/1613/102576.jpg"
+    },
+    {
+      "id": 22,
+      "title": "Boruto",
+      "image": "https://cdn.myanimelist.net/images/anime/9/84460.jpg"
+    },
+    {
+      "id": 23,
+      "title": "Tokyo Ghoul",
+      "image": "https://cdn.myanimelist.net/images/anime/1498/134443.jpg"
     }
   ]
 }
