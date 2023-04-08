@@ -74,7 +74,7 @@ def rateAnime():
             # set current anime rating for current user
             if user["username"] == username:
                 # write to content
-                user["rated"][anime_name] = float(anime_rating)
+                user["rated"][anime_name] = anime_rating
 
                 # update the file from updated content
                 with open('data/users.json', 'w') as file:

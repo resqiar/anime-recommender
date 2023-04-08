@@ -8,7 +8,8 @@ function getCurrentUser() {
 
 getCurrentUser();
 
-let rate = currentUser.rated[anime.title] ?? "0.0";
+let rate = currentUser.rated[anime.title] ? `${currentUser.rated[anime.title]}` : "0.0";
+console.log(rate);
 const rating = document.querySelector('.rating');
 let currentRatingElem = document.getElementById(rate);
 currentRatingElem.checked = true;
