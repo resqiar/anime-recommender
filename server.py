@@ -10,7 +10,7 @@ def indexPage():
 def loginPage():
     return render_template("login.html")
 
-@app.route("/login", methods=['POST'])
+@app.route("/api/login", methods=['POST'])
 def login():
     body = request.get_json()
 
@@ -31,3 +31,11 @@ def login():
     # otherwise return 404
     return make_response(jsonify({'error': 'user not found'}), 404)
 
+@app.route("/api/anime")
+def getAnime():
+    # open anime data
+    with open('data/anime.json', 'r') as file:
+        # read file as content
+        content = json.load(file)
+
+    return jsonify(content)

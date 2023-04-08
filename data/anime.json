@@ -1,0 +1,54 @@
+{
+  "animes": [
+    {
+      "id": 1,
+      "title": "Attack on Titan",
+      "image": "https://cdn.myanimelist.net/images/anime/10/47347.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Death Note",
+      "image": "https://cdn.myanimelist.net/images/anime/9/9453.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Naruto",
+      "image": "https://cdn.myanimelist.net/images/anime/13/17405.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Sword Art Online",
+      "image": "https://cdn.myanimelist.net/images/anime/11/39717.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Fullmetal Alchemist: Brotherhood",
+      "image": "https://cdn.myanimelist.net/images/anime/5/47421.jpg"
+    },
+    {
+      "id": 6,
+      "title": "One Piece",
+      "image": "https://cdn.myanimelist.net/images/anime/6/73245.jpg"
+    },
+    {
+      "id": 7,
+      "title": "Code Geass: Hangyaku no Lelouch II",
+      "image": "https://cdn.myanimelist.net/images/anime/13/89275.jpg"
+    },
+    {
+      "id": 8,
+      "title": "Your Lie in April",
+      "image": "https://cdn.myanimelist.net/images/anime/3/67177.jpg"
+    },
+    {
+      "id": 9,
+      "title": "Demon Slayer: Kimetsu no Yaiba",
+      "image": "https://cdn.myanimelist.net/images/anime/1286/99889.jpg"
+    },
+    {
+      "id": 10,
+      "title": "Cowboy Bebop",
+      "image": "https://cdn.myanimelist.net/images/anime/4/19644.jpg"
+    }
+  ]
+}

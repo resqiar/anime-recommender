@@ -10,7 +10,7 @@ async function login() {
   if (!username) return;
 
   try {
-    const req = await fetch("/login", {
+    const req = await fetch("/api/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
