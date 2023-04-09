@@ -2,7 +2,7 @@ from flask import json
 from agent.pearson import pearson_score
 
 def get_recommendation(target):
-    # open anime data
+    # open user data
     with open('data/users.json', 'r') as file:
         # read file as data
         data = json.load(file)
@@ -46,9 +46,20 @@ def get_recommendation(target):
         anime_scores.sort(reverse=True)
 
         # Extract the recommendations from the sorted list of anime scores
-        recommendations = [anime for _, anime in anime_scores]
+        raw = [anime for _, anime in anime_scores]
 
-        return recommendations
+        # Extract the real anime from anime.json
+        with open('data/anime.json', 'r') as file:
+            animes = json.load(file)
+            recommendations = []
+
+            for title in raw:
+                for anime in animes["animes"]:
+                    if anime["title"] == title:
+                        recommendations.append(anime)
+                        break
+
+            return recommendations
 
     # otherwise return none/null
     return None

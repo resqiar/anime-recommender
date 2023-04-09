@@ -11,6 +11,10 @@ def indexPage():
 def loginPage():
     return render_template("login.html")
 
+@app.route("/recommendation")
+def recommendationPage():
+    return render_template("recommendation.html")
+
 @app.route('/rate/<int:id>')
 def rate(id):
     # open JSON file

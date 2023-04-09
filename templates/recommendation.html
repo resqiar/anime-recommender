@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recommendation for You</title>
+  <!-- Include Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Include FlowBite -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="bg-white dark:bg-gray-900 w-full border-b border-gray-200 dark:border-gray-600">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <a href="https://flowbite.com/" class="flex items-center">
+        <img src="{{ url_for('static', filename='img/video.svg') }}" class="h-8 mr-3" alt="Flowbite Logo" />
+        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Animer</span>
+      </a>
+      <div class="flex md:order-2">
+        <!-- RATED HISTORY -->
+        <a href="/history" class="font-semibold hover:underline text-white mx-2">History</a>
+        <a href="/login" class="font-semibold hover:underline text-white mx-2">Logout</a>
+
+        <button data-collapse-toggle="navbar-sticky" type="button"
+          class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          aria-controls="navbar-sticky" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="ml-32 mt-16">
+    <h1 class="text-2xl font-bold">Anime Recommendation</h1>
+    <p>We personalized your recommendation based on your <a href="/history" class="hover:underline">history</a></h1>
+  </div>
+
+  <!-- CARD -->
+  <div id="anime-list" class="my-[24px] mx-8 flex gap-4 items-start justify-center flex-wrap">
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js" defer></script>
+  <script src="{{ url_for('static', filename='recommendation.js') }}"></script>
+</body>
+
+</html>
