@@ -1,4 +1,5 @@
 from flask import Flask, json, jsonify, make_response, render_template, request
+from agent.recommender import get_recommendation
 
 app = Flask(__name__)
 
@@ -65,7 +66,7 @@ def rateAnime():
     anime_name = body["anime_name"]
     anime_rating = body["anime_rating"]
 
-    # open anime data
+    # open users data
     with open('data/users.json', 'r') as file:
         # read file as content
         content = json.load(file)
@@ -84,3 +85,28 @@ def rateAnime():
 
     # otherwise return 404
     return make_response(jsonify({'error': 'data not found'}), 404)
+
+@app.route("/api/recommendation", methods=["POST"])
+def recommend():
+    body = request.get_json()
+
+    # get username from the http body
+    username = body["username"]
+
+    with open('data/users.json', 'r') as file:
+        # read file as content
+        content = json.load(file)
+
+        for target in content["users"]:
+            # set current anime rating for current user
+            if target["username"] == username:
+                recommendation = get_recommendation(target)
+
+                # if no recommendation possible (score == 0)
+                if recommendation == 0:
+                    return jsonify({'error': 'no recommendation possible'})
+
+                # return recommendation
+                return jsonify({'data': recommendation})
+
+    return make_response(jsonify({'error': 'user not found'}), 404)
