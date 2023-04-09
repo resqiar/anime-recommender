@@ -2,16 +2,32 @@
   "users": [
     {
       "rated": {
-        "Naruto": "4.5"
+        "Attack on Titan": "4.5",
+        "Crayon Shin-chan": "3.0",
+        "Naruto": "4.5",
+        "Gintama": "5.0",
+        "One Piece": "5.0"
       },
       "username": "resqiar"
     },
     {
-      "rated": {},
+      "rated": {
+        "Attack on Titan": "4.5",
+        "Crayon Shin-chan": "3.0",
+        "Naruto": "4.5",
+        "Gintama": "5.0",
+        "Your Lie in April": "5.0"
+      },
       "username": "hilmy"
     },
     {
-      "rated": {},
+      "rated": {
+        "Attack on Titan": "5.0",
+        "Boruto": "5.0",
+        "One Piece": "5.0",
+        "Naruto": "5.0",
+        "Pokemon": "4.5"
+      },
       "username": "nathan"
     }
   ]
