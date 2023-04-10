@@ -60,6 +60,3 @@ def get_recommendation(target):
                         break
 
             return recommendations
-
-    # otherwise return none/null
-    return None

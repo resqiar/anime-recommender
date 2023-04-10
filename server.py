@@ -15,6 +15,10 @@ def loginPage():
 def recommendationPage():
     return render_template("recommendation.html")
 
+@app.route("/history")
+def profilePage():
+    return render_template("history.html")
+
 @app.route('/rate/<int:id>')
 def rate(id):
     # open JSON file
@@ -114,3 +118,33 @@ def recommend():
                 return jsonify({'data': recommendation})
 
     return make_response(jsonify({'error': 'user not found'}), 404)
+
+@app.route("/api/history", methods=["POST"])
+def history():
+    body = request.get_json()
+
+    # get username from the http body
+    username = body["username"]
+
+    with open('data/users.json', 'r') as file:
+        # read file as content
+        content = json.load(file)
+
+        for target in content["users"]:
+            # set current anime rating for current user
+            if target["username"] == username:
+                # Extract the real anime from anime.json
+                with open('data/anime.json', 'r') as file:
+                    animes = json.load(file)
+                    result = []
+
+                    for title in target["rated"]:
+                        for anime in animes["animes"]:
+                            if anime["title"] == title:
+                                result.append(anime)
+                                break
+
+                    return result
+
+    return make_response(jsonify({'error': 'user not found'}), 404)
+

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>History</title>
+  <!-- Include Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Include FlowBite -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.css" rel="stylesheet" />
+</head>
+
+<!-- component -->
+
+<body class="bg-gray-300 antialiased">
+  <nav class="bg-white border-gray-200 dark:bg-gray-900">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <a href="/" class="flex items-center">
+        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Anime</span>
+      </a>
+    </div>
+  </nav>
+  <div class="flex justify-center items-center -mt-14 md:order-2">
+    <button type="button"
+      class="flex mr-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+      id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
+      <img class="w-32 h-32 rounded-full" src="https://api.dicebear.com/6.x/avataaars-neutral/svg?seed=Felix"
+        alt="user photo" />
+    </button>
+  </div>
+
+  <h1 class="font-bold ml-40 text-2xl underline">Rated History</h1>
+
+  <div id="anime-list" class="mt-[24px] mx-8 flex gap-4 items-start justify-center flex-wrap">
+  </div>
+</body>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js" defer></script>
+<script src="{{ url_for('static', filename='history.js') }}"></script>
+
+</html>
