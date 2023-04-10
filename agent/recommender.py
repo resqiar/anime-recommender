@@ -1,4 +1,5 @@
 from flask import json
+# from agent.pearson import pearson_score
 from agent.cosine import cosine_score
 
 def get_recommendation(target):
