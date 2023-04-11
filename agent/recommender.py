@@ -1,6 +1,6 @@
 from flask import json
-# from agent.pearson import pearson_score
-from agent.cosine import cosine_score
+from agent.pearson import pearson_score
+# from agent.cosine import cosine_score
 
 def get_recommendation(target):
     # open user data
@@ -19,7 +19,7 @@ def get_recommendation(target):
                 continue
 
             # calculate similarity using algorithms (pick as needed)
-            similarity = cosine_score(current, target)
+            similarity = pearson_score(current, target)
 
             # if the similarity score is negative or 0, then skip, 
             # target user has no similarity with current user.
