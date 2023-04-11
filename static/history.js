@@ -5,6 +5,10 @@ function getCurrentUser() {
   const user = localStorage.getItem("user");
   if (!user) return window.location = "/login";
   currentUser = JSON.parse(user);
+
+  // show username to text
+  const text = document.getElementById("username");
+  text.innerText = currentUser.username;
 }
 
 getCurrentUser();
